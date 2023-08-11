@@ -20,8 +20,4 @@ Ks(color shading), black contour line (U200), and red contour line ($\beta_M < 0
   <img src="Ks_January_mean.png" width="700">
 </p>
 
-**Ks_July_mean** :
-Ks(color shading), black contour line (U200), and red contour line ($\beta_M < 0$)
-<p align="center">
-  <img src="Ks_July_mean.png" width="700">
-</p>
+
