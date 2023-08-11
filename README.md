@@ -13,3 +13,7 @@ where $\bar{U}$ is a time mean of the upper-tropospheric zonal wind, $\phi$ is t
 $\beta_M =\frac{2 \Omega\cos \phi}{a}-\frac{1}{a^2}\frac{\partial}{\partial \phi }\left [ \frac{1}{\cos \phi} \frac{\partial}{\partial \phi } \left ( \bar{U}\cos \phi \right )\right ]$
 
 The zonal wavenumber Ks is the number of zonal waves that would fit around the corresponding local latitude circle.
+
+<p align="center">
+  <img src="plot/bsiso_plots.png" width="1000">
+</p>
