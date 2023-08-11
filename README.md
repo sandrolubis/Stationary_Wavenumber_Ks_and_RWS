@@ -17,5 +17,5 @@ The zonal wavenumber Ks is the number of zonal waves that would fit around the c
 **Ks_January_mean**
 Ks(color shading), black contour line (U200), and red contour line ($\beta_M < 0$)
 <p align="center">
-  <img src="Ks_January_mean.png" width="1000">
+  <img src="Ks_January_mean.png" width="500">
 </p>
