@@ -89,7 +89,7 @@ printMinMax(ks,True)
 ks=where(ks.gt.50,ks@_FillValue,ks) ; retain only k=1-50 
 
 ;===============================================================================
-; Save QG-PV Terms and n2 into one file:
+; Save Ks
 
 setfileoption("nc","Format","LargeFile")  ;NetCDF4Classic
 system( "rm " + "output/Ks."+year+".nc" )
