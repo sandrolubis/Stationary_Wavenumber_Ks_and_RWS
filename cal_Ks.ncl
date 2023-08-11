@@ -93,9 +93,9 @@ ks=where(ks.gt.50,ks@_FillValue,ks) ; retain only k=1-50
 setfileoption("nc","Format","LargeFile")  ;NetCDF4Classic
 system( "rm " + "output/Ks."+year+".nc" )
 output = addfile("output/Ks."+year+".nc","c")
-output->ks    		      = ks
-output->betam           = betam
-output->um              = umtmp
+output->ks    		   = ks
+output->betam        = betam
+output->um           = umtmp
 
 
 delete(dum)
