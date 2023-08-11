@@ -8,7 +8,7 @@ In spherical coordinates, Ks is given by
 
 $K_s=a\cos \phi\left (\frac{\beta_M}{\bar{U}} \right )$
 
-where $\bar{U}$ is a time mean of the upper-tropospheric zonal wind, ϕ is the latitude, a is the equatorial Earth radius, Ω being Earth’s rotation rate and
+where $\bar{U}$ is a time mean of the upper-tropospheric zonal wind, $\phi$ is the latitude, $a$ is the equatorial Earth radius, $\Omega$ being Earth’s rotation rate and
 
 $\beta_M =\frac{2 \Omega\cos \phi}{a}-\frac{1}{a^2}\frac{\partial}{\partial \phi }\left [ \frac{1}{\cos \phi} \frac{\partial}{\partial \phi } \left ( \bar{U}\cos \phi \right )\right ]$
 
