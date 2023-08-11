@@ -14,7 +14,8 @@ $\beta_M =\frac{2 \Omega\cos \phi}{a}-\frac{1}{a^2}\frac{\partial}{\partial \phi
 
 The zonal wavenumber Ks is the number of zonal waves that would fit around the corresponding local latitude circle.
 
-Ks_January_mean
+**Ks_January_mean**
+Ks(color shading), black contour line (U200), and red contour line ($\beta_M < 0$)
 <p align="center">
   <img src="Ks_January_mean.png" width="1000">
 </p>
