@@ -16,13 +16,14 @@ re=6378388   ;  Radius of the earth
 sclhgt=8000. ;  Scale height
 
 
+do year=1979,2021
 
-f = addfile("u200.daily.1979_2021.nc", "r")   ;U200
+f = addfile("data/u200."+year+".nc", "r")   ;U200
 
 
-dum 	      = cd_calendar(f->time,0)
-months 	    = toint(dum(:,1))
-imonths     = ind(months.ge.6 .and. months.le.8)  ; chose season JJA
+dum 	= cd_calendar(f->time,0)
+months 	= toint(dum(:,1))
+imonths     = ind(months.ge.6 .and. months.le.8)  ; chose season JJA as Umean
               
 uvar  	= f->var131(imonths,0,:,:)  
 
@@ -43,27 +44,25 @@ pi = atan(1.0)*4.
 ; cosine
 coslat = cos(lat(:)*pi/180.)
 
-
 ; beta (first term)
 beta =  2.*2.*pi/(60.*60.*24.)*coslat  / re
 beta!0 = "lat"
 beta&lat = lat
 beta@_FillValue = -1.e+21
 
-
 betatmp    = conform_dims(dimsizes(uvar),beta,1)
 coslattmp  = conform_dims(dimsizes(uvar),coslat,1)
 umtmp=conform_dims(dimsizes(uvar),umean,(/1,2/))
 copy_VarCoords(uvar,umtmp)
 
-delete(umean)
-
 ; U*(cos*lat)
 ucoslat= umtmp*coslattmp
 copy_VarCoords(uvar,ucoslat)
+;printMinMax(ucoslat,True)
 
 ;d(U*(cos*lat)^2)/dy / coslat
 dUdy = center_finite_diff_n(ucoslat, lat*pi/180., False,0,1) / coslattmp
+;printMinMax(dUdy,True)
 
 ;ddU/ddy
 ddUdyy = center_finite_diff_n(dUdy, lat*pi/180., False,0,1)/re^2
@@ -92,15 +91,30 @@ ks=where(ks.gt.50,ks@_FillValue,ks) ; retain only k=1-50
 ;===============================================================================
 ; Save QG-PV Terms and n2 into one file:
 
-;setfileoption("nc","Format","LargeFile")  ;NetCDF4Classic
-;system( "rm " + "Ks."+year+".nc" )
-;output = addfile("Ks."+year+".nc","c")
-system( "rm " + "Ks.U200_1979_2021.nc" )
-output = addfile("Ks.U200_1979_2021.nc","c")
-output->ks    		= ks
-output->betam     = betam
-output->um        = umtmp
+setfileoption("nc","Format","LargeFile")  ;NetCDF4Classic
+system( "rm " + "output/Ks."+year+".nc" )
+output = addfile("output/Ks."+year+".nc","c")
+output->ks    		      = ks
+output->betam           = betam
+output->um              = umtmp
 
 
+delete(dum)
+delete(months)
+delete(imonths)
+delete(uvar)
+delete(umean)
+delete(beta)
+delete(betatmp)
+delete(coslattmp )
+delete(umtmp)
+delete(ucoslat)
+delete(dUdy)
+delete(ddUdyy )
+delete(betam)
+delete(r)
+delete(ks)
+
+end do
 
 print("Done!!, see you again :)")
