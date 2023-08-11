@@ -27,6 +27,8 @@ imonths     = ind(months.ge.6 .and. months.le.8)  ; chose season JJA as Umean
 uvar  	= f->var131(imonths,0,:,:)  
 
 umean	= dim_avg_n_Wrap(uvar,0)  ; Ubar
+umean@_FillValue = -1.e+21
+umean=where(umean.lt.0,umean@_FillValue,umean)
 
 printVarSummary(uvar)
 printVarSummary(umean)
