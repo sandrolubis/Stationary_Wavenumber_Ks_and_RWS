@@ -6,4 +6,4 @@ so that regions where Ks is maximized, such as the westerly jets, act as wavegui
 
 In spherical coordinates, Ks is given by
 
-where $\bar{U}$ is a time mean of the upper-tropospheric zonal wind, ϕ is the latitude, a is the equatorial Earth radius, and
+where $\bar{U}$ is a time mean of the upper-tropospheric zonal wind, ϕ is the latitude, a is the equatorial Earth radius, Ω being Earth’s rotation rate and
