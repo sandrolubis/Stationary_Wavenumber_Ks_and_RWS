@@ -20,9 +20,8 @@ do year=1979,2021
 
 f = addfile("data/u200."+year+".nc", "r")   ;U200
 
-
-dum 	= cd_calendar(f->time,0)
-months 	= toint(dum(:,1))
+dum 	      = cd_calendar(f->time,0)
+months 	    = toint(dum(:,1))
 imonths     = ind(months.ge.6 .and. months.le.8)  ; chose season JJA as Umean
               
 uvar  	= f->var131(imonths,0,:,:)  
