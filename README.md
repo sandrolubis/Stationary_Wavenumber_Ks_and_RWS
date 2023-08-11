@@ -7,3 +7,5 @@ so that regions where Ks is maximized, such as the westerly jets, act as wavegui
 In spherical coordinates, Ks is given by
 
 where $\bar{U}$ is a time mean of the upper-tropospheric zonal wind, ϕ is the latitude, a is the equatorial Earth radius, Ω being Earth’s rotation rate and
+
+The zonal wavenumber Ks is then the number of zonal waves that would fit around the corresponding local latitude circle. We use full-field DJF monthly means of U200 as  here
