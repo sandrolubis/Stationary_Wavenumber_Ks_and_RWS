@@ -24,6 +24,8 @@ f = addfile("u200.mon.1979_2021.nc", "r")   ;U200
 uvar  	= f->var131(:,0,:,:)  
 
 umean	= month_to_season(uvar, (/"JJA"/))  ; choose seasons
+umean@_FillValue = -1.e+21
+umean=where(umean.lt.0,umean@_FillValue,umean)
 
 printVarSummary(uvar)
 printVarSummary(umean)
