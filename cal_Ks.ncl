@@ -1,5 +1,5 @@
 ; Compute zonal stationary waves Ks in the spherical coordinates
-; See eq. (1)-(2) Henderson et al., (2017)
+; See eq. (1)-(2) in DOI: https://doi.org/10.1175/JCLI-D-14-00185.1
 ; by Sandro Lubis,  Sept 2014 
 ; GEOMAR
 ;===============================================================================
