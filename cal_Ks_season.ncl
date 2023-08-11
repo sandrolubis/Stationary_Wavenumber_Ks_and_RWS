@@ -91,7 +91,7 @@ printVarSummary(ks)
 
 
 ;===============================================================================
-; Save QG-PV Terms and n2 into one file:
+; Save Ks
 
 setfileoption("nc","Format","LargeFile")  ;NetCDF4Classic
 system("rm " + "Ks.season.nc")
