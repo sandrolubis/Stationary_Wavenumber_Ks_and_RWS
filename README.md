@@ -1,6 +1,6 @@
 # Stationary_Wavenumber_Ks
 
-As found by Hoskins and Ambrizzi (1993), the background zonal flow is crucial for the propagation of Rossby waves. They found that the zonal stationary wavenumber Ks can be interpreted as a refractive index for Rossby waves and that regions with maxima in Ks act as waveguides.
+Hoskins and Ambrizzi (1993) underscores the critical influence of the background zonal flow on the behavior of Rossby waves. They found that the zonal stationary wavenumber Ks can be interpreted as a refractive index for Rossby waves and that regions with maxima in Ks act as waveguides.
 
 In spherical coordinates, Ks is given by
 
