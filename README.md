@@ -23,5 +23,7 @@ Ks(color shading), black contour line (U200), and red contour line ($\beta_M < 0
 
 The Rossby wave source is a term used to describe the mechanisms that generate and maintain Rossby waves. The RWS was derived from the barotropic vorticity equation in pressure coordinates as in Sardeshmukh and Hoskins (1988). When expressing the horizontal winds in terms of their divergent and rotational components, the Rossby wave activity can be calculated as follows:
 
-$RWS = -\nabla \cdot \left( {v}_x \zeta \right) = -\left( \zeta \nabla \cdot {v}_x + {v}_x \cdot \nabla \zeta \right)$
+$RWS = -\nabla \cdot \left( {v}_x \zeta \right) = -\left( \zeta \nabla \cdot {v}_x + {v}_x \cdot \nabla \zeta \right)$,
+
+with $\zeta$  being the absolute vorticity. Therefore the RWS account for the rate of change of vorticity due to vortex stretching (first term) and to the vorticity advection by the divergent part of the wind (second term).
 
