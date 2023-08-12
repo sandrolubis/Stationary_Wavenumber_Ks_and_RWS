@@ -21,3 +21,5 @@ Ks(color shading), black contour line (U200), and red contour line ($\beta_M < 0
 
 # Rossby Wave Source (RWS)
 
+The Rossby wave source is a term used to describe the mechanisms that generate and maintain Rossby waves. It's a mathematical expression that accounts for the changes in the basic state of the atmosphere or ocean, such as the temperature gradient, wind speed, and Coriolis force, that drive the development of these waves. 
+
